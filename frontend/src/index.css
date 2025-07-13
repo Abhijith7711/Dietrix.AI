@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+  color: #ffffff;
+  /* Prevent ResizeObserver loop errors */
+  overflow-x: hidden;
+  /* Prevent layout thrashing */
+  contain: layout style paint;
+  /* Disable problematic animations */
+  animation: none !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d);
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0099cc, #e6457a);
+}
+
+/* Simplified transitions to prevent ResizeObserver errors */
+* {
+  transition: none !important;
+  will-change: auto !important;
+  /* Prevent layout thrashing */
+  contain: layout style;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+/* Disable problematic animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Disable card animations to prevent ResizeObserver errors */
+.MuiCard-root {
+  animation: none !important;
+  will-change: auto !important;
+  /* Prevent layout thrashing */
+  contain: layout style paint;
+}
+
+/* Simplified hover effects */
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Simplified button hover */
+.MuiButton-root:hover {
+  transform: translateY(-1px);
+}
+
+/* Simplified chip hover */
+.MuiChip-root:hover {
+  transform: scale(1.02);
+}
+
+/* Disable framer-motion animations */
+[data-framer-motion] {
+  will-change: auto !important;
+  contain: layout style paint;
+}
+
+/* Markdown styling */
+.react-markdown {
+  font-size: inherit;
+  line-height: inherit;
+  color: #ffffff;
+}
+
+.react-markdown h1,
+.react-markdown h2,
+.react-markdown h3,
+.react-markdown h4,
+.react-markdown h5,
+.react-markdown h6 {
+  margin: 0.5em 0 0.3em 0;
+  font-weight: 600;
+  color: #00d4ff;
+}
+
+.react-markdown p {
+  margin: 0.5em 0;
+  color: #ffffff;
+}
+
+.react-markdown ul,
+.react-markdown ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+  color: #ffffff;
+}
+
+.react-markdown li {
+  margin: 0.3em 0;
+  color: #ffffff;
+}
+
+.react-markdown strong {
+  font-weight: 600;
+  color: #ff6b9d;
+}
+
+.react-markdown em {
+  font-style: italic;
+  color: #00d4ff;
+}
+
+.react-markdown code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #00d4ff;
+}
+
+.react-markdown blockquote {
+  border-left: 4px solid #00d4ff;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .MuiTypography-h3 {
+    font-size: 2rem !important;
+  }
+  
+  .MuiTypography-h4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .MuiTypography-h5 {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.MuiCircularProgress-root {
+  animation: spin 1s linear infinite;
+}
+
+/* Futuristic text effects */
+.gradient-text {
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 
+    0 0 5px rgba(0, 212, 255, 0.5),
+    0 0 10px rgba(0, 212, 255, 0.3),
+    0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+.neon-glow:hover {
+  box-shadow: 
+    0 0 10px rgba(0, 212, 255, 0.8),
+    0 0 20px rgba(0, 212, 255, 0.5),
+    0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+/* Prevent layout shifts */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize for better performance */
+* {
+  box-sizing: border-box;
+}
+
+/* Completely disable animations for users who prefer it or to prevent ResizeObserver errors */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Additional ResizeObserver optimizations */
+.MuiContainer-root,
+.MuiGrid-root,
+.MuiBox-root {
+  contain: layout style;
+}
+
+/* Prevent unnecessary reflows */
+.motion-div {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Force hardware acceleration */
+.MuiCard-root,
+.MuiButton-root,
+.MuiChip-root {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Disable all animations to prevent ResizeObserver errors */
+* {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Only allow essential animations */
+.MuiCircularProgress-root {
+  animation: spin 1s linear infinite !important;
+}

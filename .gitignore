@@ -1,0 +1,19 @@
+# Virtual Environment
+venv310/
+
+# Frontend Dependencies
+frontend/node_modules/
+
+# Environment Variables
+.env
+
+# Vector Database (Generated Data)
+chroma_store/
+
+# Python Cache Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
