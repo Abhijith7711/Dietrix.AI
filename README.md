@@ -58,34 +58,45 @@ Dietrix/
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/Abhijith7711/Dietrix.AI.git
+```
+```bash
 cd Dietrix
 ```
 
 ### 2. Set Up Python Environment
+###### Create virtual environment
 ```bash
-# Create virtual environment
 python -m venv venv310
-
-# Activate virtual environment
-# Windows:
+```
+###### Activate virtual environment
+###### Windows:
+```bash
 venv310\Scripts\activate
-# Unix/Linux/Mac:
+```
+##### Unix/Linux/Mac:
+```bash
 source venv310/bin/activate
+```
 
-# Install Python dependencies
+###### Install Python dependencies
+```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Set Up Frontend
+###### Navigate to frontend directory
 ```bash
-# Navigate to frontend directory
 cd frontend
+```
 
-# Install Node.js dependencies
+###### Install Node.js dependencies
+```bash
 npm install --legacy-peer-deps
+```
 
-# Return to project root
+###### Return to project root
+```bash
 cd ..
 ```
 
@@ -98,21 +109,19 @@ GROQ_API_KEY=your_groq_api_key_here
 ## Usage
 
 #### Backend Server
+###### Start FastAPI server
 ```bash
-# Activate virtual environment
-venv310\Scripts\activate  # Windows
-source venv310/bin/activate  # Unix/Linux/Mac
-
-# Start FastAPI server
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 #### Frontend Server
+###### Navigate to frontend directory
 ```bash
-# Navigate to frontend directory
 cd frontend
+```
 
-# Start React development server
+###### Start React development server
+```bash
 npm start
 ```
 
